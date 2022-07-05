@@ -1571,7 +1571,7 @@ func applyTemplate(p param) (*openapiSwaggerObject, error) {
 			messages[swgRef] = runtimeError
 		} else {
 			// just in case there is an error looking up runtimeError
-			glog.Error(err)
+			return nil, err
 		}
 	}
 
