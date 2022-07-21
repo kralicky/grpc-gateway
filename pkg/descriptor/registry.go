@@ -183,15 +183,15 @@ func (r *Registry) LoadFromPlugin(gen *protogen.Plugin) error {
 }
 
 func (r *Registry) load(gen *protogen.Plugin) error {
-	for filePath, f := range gen.FilesByPath {
-		r.loadFile(filePath, f)
+	for _, f := range gen.Files {
+		r.loadFile(f.Proto.GetName(), f)
 	}
 
-	for filePath, f := range gen.FilesByPath {
+	for _, f := range gen.Files {
 		if !f.Generate {
 			continue
 		}
-		file := r.files[filePath]
+		file := r.files[f.Proto.GetName()]
 		if err := r.loadServices(file); err != nil {
 			return err
 		}
