@@ -70,8 +70,8 @@ to track the versions of the following executable packages:
 package tools
 
 import (
-    _ "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway"
-    _ "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2"
+    _ "github.com/kralicky/grpc-gateway/v2/protoc-gen-grpc-gateway"
+    _ "github.com/kralicky/grpc-gateway/v2/protoc-gen-openapiv2"
     _ "google.golang.org/grpc/cmd/protoc-gen-go-grpc"
     _ "google.golang.org/protobuf/cmd/protoc-gen-go"
 )
@@ -81,8 +81,8 @@ Run `go mod tidy` to resolve the versions. Install by running
 
 ```sh
 $ go install \
-    github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway \
-    github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2 \
+    github.com/kralicky/grpc-gateway/v2/protoc-gen-grpc-gateway \
+    github.com/kralicky/grpc-gateway/v2/protoc-gen-openapiv2 \
     google.golang.org/protobuf/cmd/protoc-gen-go \
     google.golang.org/grpc/cmd/protoc-gen-go-grpc
 ```
@@ -352,7 +352,7 @@ Alternatively, see the section on remotely managed plugin versions below.
      "net/http"
 
      "github.com/golang/glog"
-     "github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
+     "github.com/kralicky/grpc-gateway/v2/runtime"
      "google.golang.org/grpc"
      "google.golang.org/grpc/credentials/insecure"
 
@@ -486,7 +486,7 @@ This requires no local installation of any plugins. Be careful to use the same
 version of the generator as the runtime library, i.e. if using `v2.6.0-1`, run
 
 ```shell
-$ go get github.com/grpc-ecosystem/grpc-gateway/v2@v2.6.0
+$ go get github.com/kralicky/grpc-gateway/v2@v2.6.0
 ```
 
 To get the same version of the runtime in your `go.mod`.
