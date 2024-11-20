@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/grpc-ecosystem/grpc-gateway/v2/internal/httprule"
+	"github.com/grpc-ecosystem/grpc-gateway/v2/pkg/httprule"
 	"google.golang.org/protobuf/compiler/protogen"
 	"google.golang.org/protobuf/encoding/prototext"
 	"google.golang.org/protobuf/proto"

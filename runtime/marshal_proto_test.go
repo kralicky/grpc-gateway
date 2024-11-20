@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
-	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime/internal/examplepb"
+	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime/pkg/examplepb"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/types/known/timestamppb"
 )

@@ -12,9 +12,9 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/grpc-ecosystem/grpc-gateway/v2/internal/descriptor"
-	"github.com/grpc-ecosystem/grpc-gateway/v2/internal/descriptor/openapiconfig"
-	"github.com/grpc-ecosystem/grpc-gateway/v2/internal/httprule"
+	"github.com/grpc-ecosystem/grpc-gateway/v2/pkg/descriptor"
+	"github.com/grpc-ecosystem/grpc-gateway/v2/pkg/descriptor/openapiconfig"
+	"github.com/grpc-ecosystem/grpc-gateway/v2/pkg/httprule"
 	openapi_options "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/options"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"google.golang.org/genproto/googleapis/api/annotations"
