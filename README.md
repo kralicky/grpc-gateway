@@ -71,8 +71,8 @@ to track the versions of the following executable packages:
 package tools
 
 import (
-    _ "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway"
-    _ "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2"
+    _ "github.com/kralicky/grpc-gateway/v2/protoc-gen-grpc-gateway"
+    _ "github.com/kralicky/grpc-gateway/v2/protoc-gen-openapiv2"
     _ "google.golang.org/grpc/cmd/protoc-gen-go-grpc"
     _ "google.golang.org/protobuf/cmd/protoc-gen-go"
 )
@@ -354,7 +354,7 @@ import (
   "flag"
   "net/http"
 
-  "github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
+  "github.com/kralicky/grpc-gateway/v2/runtime"
   "google.golang.org/grpc"
   "google.golang.org/grpc/credentials/insecure"
   "google.golang.org/grpc/grpclog"

@@ -9,8 +9,8 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
-	pb "github.com/grpc-ecosystem/grpc-gateway/v2/runtime/pkg/examplepb"
+	"github.com/kralicky/grpc-gateway/v2/runtime"
+	pb "github.com/kralicky/grpc-gateway/v2/runtime/pkg/examplepb"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/status"
