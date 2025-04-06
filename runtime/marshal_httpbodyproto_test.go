@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
+	"github.com/kralicky/grpc-gateway/v2/runtime"
 	"google.golang.org/genproto/googleapis/api/httpbody"
 	"google.golang.org/protobuf/encoding/protojson"
 )
@@ -49,6 +49,5 @@ func TestHTTPBodyMarshal(t *testing.T) {
 	}
 	if !bytes.Equal(res, expected) {
 		t.Errorf("Marshalled data not equal (%q, %q)", res, expected)
-
 	}
 }

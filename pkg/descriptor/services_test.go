@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/grpc-ecosystem/grpc-gateway/v2/pkg/httprule"
+	"github.com/kralicky/grpc-gateway/v2/pkg/httprule"
 	"google.golang.org/protobuf/compiler/protogen"
 	"google.golang.org/protobuf/encoding/prototext"
 	"google.golang.org/protobuf/proto"
@@ -779,7 +779,8 @@ func TestExtractServicesWithError(t *testing.T) {
 		// body field path not resolved
 		{
 			target: "path/to/example.proto",
-			srcs: []string{`
+			srcs: []string{
+				`
 						name: "path/to/example.proto",
 						package: "example"
 						message_type <
@@ -1002,7 +1003,8 @@ func TestExtractServicesWithError(t *testing.T) {
 		// unsupported path parameter type
 		{
 			target: "path/to/example.proto",
-			srcs: []string{`
+			srcs: []string{
+				`
 					name: "path/to/example.proto",
 					package: "example"
 					message_type <

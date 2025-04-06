@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/options"
+	"github.com/kralicky/grpc-gateway/v2/protoc-gen-openapiv2/options"
 )
 
 func TestLoadOpenAPIConfigFromYAMLRejectInvalidYAML(t *testing.T) {
@@ -127,5 +127,4 @@ openapiOptions:
 	if err == nil {
 		t.Errorf("Expected invalid key error")
 	}
-
 }

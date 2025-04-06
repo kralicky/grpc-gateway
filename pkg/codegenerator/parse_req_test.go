@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/grpc-ecosystem/grpc-gateway/v2/pkg/codegenerator"
+	"github.com/kralicky/grpc-gateway/v2/pkg/codegenerator"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/testing/protocmp"
 	"google.golang.org/protobuf/types/pluginpb"
@@ -62,8 +62,7 @@ func mustGetReader(pb proto.Message) io.Reader {
 	return bytes.NewBuffer(b)
 }
 
-type invalidReader struct {
-}
+type invalidReader struct{}
 
 func (*invalidReader) Read(p []byte) (int, error) {
 	return 0, errors.New("invalid reader")

@@ -8,10 +8,10 @@ package examplepb
 
 import (
 	context "context"
-	oneofenum "github.com/grpc-ecosystem/grpc-gateway/v2/examples/pkg/proto/oneofenum"
-	pathenum "github.com/grpc-ecosystem/grpc-gateway/v2/examples/pkg/proto/pathenum"
-	sub "github.com/grpc-ecosystem/grpc-gateway/v2/examples/pkg/proto/sub"
-	sub2 "github.com/grpc-ecosystem/grpc-gateway/v2/examples/pkg/proto/sub2"
+	oneofenum "github.com/kralicky/grpc-gateway/v2/examples/pkg/proto/oneofenum"
+	pathenum "github.com/kralicky/grpc-gateway/v2/examples/pkg/proto/pathenum"
+	sub "github.com/kralicky/grpc-gateway/v2/examples/pkg/proto/sub"
+	sub2 "github.com/kralicky/grpc-gateway/v2/examples/pkg/proto/sub2"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"

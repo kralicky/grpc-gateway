@@ -9,8 +9,8 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/grpc-ecosystem/grpc-gateway/v2/pkg/descriptor"
-	"github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/pkg/genopenapi"
+	"github.com/kralicky/grpc-gateway/v2/pkg/descriptor"
+	"github.com/kralicky/grpc-gateway/v2/protoc-gen-openapiv2/pkg/genopenapi"
 	"gopkg.in/yaml.v3"
 
 	"google.golang.org/protobuf/encoding/prototext"
@@ -407,7 +407,6 @@ func TestGenerateRPCOrderPreserved(t *testing.T) {
 			}
 		})
 	}
-
 }
 
 func TestGenerateRPCOrderNotPreserved(t *testing.T) {
@@ -503,7 +502,6 @@ func TestGenerateRPCOrderNotPreserved(t *testing.T) {
 			}
 		})
 	}
-
 }
 
 func TestGenerateRPCOrderPreservedMultipleServices(t *testing.T) {
@@ -1575,9 +1573,11 @@ func TestGenerateRPCOrderPreservedMergeFilesAdditionalBindingsMultipleServices(t
 			t.Log(content)
 
 			contentsSlice := strings.Fields(content)
-			expectedPaths := []string{"/d/first", "/e/second", "/c/third",
+			expectedPaths := []string{
+				"/d/first", "/e/second", "/c/third",
 				"/b/first", "/a/second", "/g/third", "/b/bpath", "/a/additional",
-				"/a/apath", "/z/zAdditional", "/c/cpath", "/b/bAdditional"}
+				"/a/apath", "/z/zAdditional", "/c/cpath", "/b/bAdditional",
+			}
 
 			foundPaths := []string{}
 			for _, contentValue := range contentsSlice {
@@ -1775,9 +1775,11 @@ func TestGenerateRPCOrderNotPreservedMergeFilesAdditionalBindingsMultipleService
 			t.Log(content)
 
 			contentsSlice := strings.Fields(content)
-			expectedPaths := []string{"/d/first", "/e/second", "/c/third",
+			expectedPaths := []string{
+				"/d/first", "/e/second", "/c/third",
 				"/b/first", "/a/second", "/g/third", "/b/bpath", "/a/additional",
-				"/a/apath", "/z/zAdditional", "/c/cpath", "/b/bAdditional"}
+				"/a/apath", "/z/zAdditional", "/c/cpath", "/b/bAdditional",
+			}
 			sort.Strings(expectedPaths)
 
 			foundPaths := []string{}

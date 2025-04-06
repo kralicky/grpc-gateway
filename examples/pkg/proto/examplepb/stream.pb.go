@@ -7,7 +7,7 @@
 package examplepb
 
 import (
-	sub "github.com/grpc-ecosystem/grpc-gateway/v2/examples/pkg/proto/sub"
+	sub "github.com/kralicky/grpc-gateway/v2/examples/pkg/proto/sub"
 	_ "google.golang.org/genproto/googleapis/api/annotations"
 	httpbody "google.golang.org/genproto/googleapis/api/httpbody"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"

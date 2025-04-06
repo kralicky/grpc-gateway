@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
+	"github.com/kralicky/grpc-gateway/v2/runtime"
 )
 
 func TestMarshalerForRequest(t *testing.T) {
@@ -107,6 +107,7 @@ func (dummyMarshaler) Unmarshal([]byte, interface{}) error {
 func (dummyMarshaler) NewDecoder(r io.Reader) runtime.Decoder {
 	return dummyDecoder{}
 }
+
 func (dummyMarshaler) NewEncoder(w io.Writer) runtime.Encoder {
 	return dummyEncoder{}
 }

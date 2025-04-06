@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
+	"github.com/kralicky/grpc-gateway/v2/runtime"
 	"google.golang.org/grpc/metadata"
 )
 
@@ -268,6 +268,7 @@ func TestAnnotateContext_SupportsTimeouts(t *testing.T) {
 		}
 	}
 }
+
 func TestAnnotateContext_SupportsCustomAnnotators(t *testing.T) {
 	ctx := context.Background()
 	md1 := func(context.Context, *http.Request) metadata.MD { return metadata.New(map[string]string{"foo": "bar"}) }
@@ -554,6 +555,7 @@ func TestAnnotateIncomingContext_SupportsTimeouts(t *testing.T) {
 		}
 	}
 }
+
 func TestAnnotateIncomingContext_SupportsCustomAnnotators(t *testing.T) {
 	ctx := context.Background()
 	md1 := func(context.Context, *http.Request) metadata.MD { return metadata.New(map[string]string{"foo": "bar"}) }

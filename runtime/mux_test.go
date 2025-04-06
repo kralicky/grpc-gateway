@@ -11,8 +11,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
-	"github.com/grpc-ecosystem/grpc-gateway/v2/utilities"
+	"github.com/kralicky/grpc-gateway/v2/runtime"
+	"github.com/kralicky/grpc-gateway/v2/utilities"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/health/grpc_health_v1"
@@ -417,7 +417,8 @@ func TestMuxServeHTTP(t *testing.T) {
 						int(utilities.OpPush), 0,
 						int(utilities.OpConcatN), 1,
 						int(utilities.OpCapture), 1,
-						int(utilities.OpLitPush), 2},
+						int(utilities.OpLitPush), 2,
+					},
 					pool: []string{"foo", "id", "bar"},
 				},
 			},
@@ -439,7 +440,8 @@ func TestMuxServeHTTP(t *testing.T) {
 						int(utilities.OpPush), 0,
 						int(utilities.OpConcatN), 1,
 						int(utilities.OpCapture), 1,
-						int(utilities.OpLitPush), 2},
+						int(utilities.OpLitPush), 2,
+					},
 					pool: []string{"foo", "id", "bar"},
 				},
 			},
@@ -460,7 +462,8 @@ func TestMuxServeHTTP(t *testing.T) {
 						int(utilities.OpPush), 0,
 						int(utilities.OpConcatN), 1,
 						int(utilities.OpCapture), 1,
-						int(utilities.OpLitPush), 2},
+						int(utilities.OpLitPush), 2,
+					},
 					pool: []string{"foo", "id", "bar"},
 				},
 			},

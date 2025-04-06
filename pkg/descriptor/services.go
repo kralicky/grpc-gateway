@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/grpc-ecosystem/grpc-gateway/v2/pkg/httprule"
+	"github.com/kralicky/grpc-gateway/v2/pkg/httprule"
 	options "google.golang.org/genproto/googleapis/api/annotations"
 	"google.golang.org/grpc/grpclog"
 	"google.golang.org/protobuf/proto"

@@ -10,9 +10,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/grpc-ecosystem/grpc-gateway/v2/pkg/descriptor"
-	gen "github.com/grpc-ecosystem/grpc-gateway/v2/pkg/generator"
-	openapioptions "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/options"
+	"github.com/kralicky/grpc-gateway/v2/pkg/descriptor"
+	gen "github.com/kralicky/grpc-gateway/v2/pkg/generator"
+	openapioptions "github.com/kralicky/grpc-gateway/v2/protoc-gen-openapiv2/options"
 	statuspb "google.golang.org/genproto/googleapis/rpc/status"
 	"google.golang.org/grpc/grpclog"
 	"google.golang.org/protobuf/proto"

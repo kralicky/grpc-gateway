@@ -3,7 +3,7 @@ package server
 import (
 	"context"
 
-	examples "github.com/grpc-ecosystem/grpc-gateway/v2/examples/pkg/proto/examplepb"
+	examples "github.com/kralicky/grpc-gateway/v2/examples/pkg/proto/examplepb"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/grpclog"
 	"google.golang.org/grpc/metadata"

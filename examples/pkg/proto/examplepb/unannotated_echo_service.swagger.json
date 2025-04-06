@@ -505,7 +505,7 @@
       "description": "Embedded represents a message embedded in SimpleMessage.",
       "x-go-type": {
         "import": {
-          "package": "github.com/grpc-ecosystem/grpc-gateway/v2/examples/internal/proto/examplepb"
+          "package": "github.com/kralicky/grpc-gateway/v2/examples/internal/proto/examplepb"
         },
         "type": "UnannotatedEmbedded"
       }
@@ -522,7 +522,7 @@
       },
       "x-go-type": {
         "import": {
-          "package": "github.com/grpc-ecosystem/grpc-gateway/v2/examples/internal/proto/examplepb"
+          "package": "github.com/kralicky/grpc-gateway/v2/examples/internal/proto/examplepb"
         },
         "type": "UnannotatedNestedMessage"
       }

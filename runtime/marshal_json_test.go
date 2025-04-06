@@ -8,8 +8,8 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
-	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime/pkg/examplepb"
+	"github.com/kralicky/grpc-gateway/v2/runtime"
+	"github.com/kralicky/grpc-gateway/v2/runtime/pkg/examplepb"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/testing/protocmp"
 	"google.golang.org/protobuf/types/known/emptypb"
@@ -292,18 +292,22 @@ var (
 		},
 		{data: map[string]int{"FOO": 0, "BAR": -1}, json: "{\"BAR\":-1,\"FOO\":0}"},
 		{data: map[string]int{"FOO": 0, "BAR": -1}, indent: defaultIndent, json: "{\n  \"BAR\": -1,\n  \"FOO\": 0\n}"},
-		{data: struct {
-			A string
-			B int
-			C map[string]int
-		}{A: "Go", B: 3, C: map[string]int{"FOO": 0, "BAR": -1}},
-			json: "{\"A\":\"Go\",\"B\":3,\"C\":{\"BAR\":-1,\"FOO\":0}}"},
-		{data: struct {
-			A string
-			B int
-			C map[string]int
-		}{A: "Go", B: 3, C: map[string]int{"FOO": 0, "BAR": -1}}, indent: defaultIndent,
-			json: "{\n  \"A\": \"Go\",\n  \"B\": 3,\n  \"C\": {\n    \"BAR\": -1,\n    \"FOO\": 0\n  }\n}"},
+		{
+			data: struct {
+				A string
+				B int
+				C map[string]int
+			}{A: "Go", B: 3, C: map[string]int{"FOO": 0, "BAR": -1}},
+			json: "{\"A\":\"Go\",\"B\":3,\"C\":{\"BAR\":-1,\"FOO\":0}}",
+		},
+		{
+			data: struct {
+				A string
+				B int
+				C map[string]int
+			}{A: "Go", B: 3, C: map[string]int{"FOO": 0, "BAR": -1}}, indent: defaultIndent,
+			json: "{\n  \"A\": \"Go\",\n  \"B\": 3,\n  \"C\": {\n    \"BAR\": -1,\n    \"FOO\": 0\n  }\n}",
+		},
 	}
 	builtinKnownErrors = []struct {
 		data interface{}

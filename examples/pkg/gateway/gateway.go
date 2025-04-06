@@ -8,9 +8,9 @@ import (
 
 	"google.golang.org/grpc/credentials/insecure"
 
-	"github.com/grpc-ecosystem/grpc-gateway/v2/examples/pkg/proto/examplepb"
-	standalone "github.com/grpc-ecosystem/grpc-gateway/v2/examples/pkg/proto/standalone"
-	gwruntime "github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
+	"github.com/kralicky/grpc-gateway/v2/examples/pkg/proto/examplepb"
+	standalone "github.com/kralicky/grpc-gateway/v2/examples/pkg/proto/standalone"
+	gwruntime "github.com/kralicky/grpc-gateway/v2/runtime"
 	_ "google.golang.org/genproto/googleapis/rpc/errdetails"
 	"google.golang.org/grpc"
 )

@@ -5,9 +5,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/grpc-ecosystem/grpc-gateway/v2/pkg/codegenerator"
-	"github.com/grpc-ecosystem/grpc-gateway/v2/pkg/descriptor/openapiconfig"
-	"github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/options"
+	"github.com/kralicky/grpc-gateway/v2/pkg/codegenerator"
+	"github.com/kralicky/grpc-gateway/v2/pkg/descriptor/openapiconfig"
+	"github.com/kralicky/grpc-gateway/v2/protoc-gen-openapiv2/options"
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
 	"google.golang.org/genproto/googleapis/api/annotations"
@@ -125,7 +125,7 @@ type Registry struct {
 	// messageOptions is a mapping of fully-qualified message name to additional OpenAPI message options
 	messageOptions map[string]*options.Schema
 
-	//serviceOptions is a mapping of fully-qualified service name to additional OpenAPI service options
+	// serviceOptions is a mapping of fully-qualified service name to additional OpenAPI service options
 	serviceOptions map[string]*options.Tag
 
 	// fieldOptions is a mapping of the fully-qualified name of the parent message concat

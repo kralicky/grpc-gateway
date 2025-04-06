@@ -1,7 +1,8 @@
 ---
 swagger: "2.0"
 info:
-  description: "Unannotated Echo Service\nSimilar to echo_service.proto but without\
+  description:
+    "Unannotated Echo Service\nSimilar to echo_service.proto but without\
     \ annotations. See\nunannotated_echo_service.yaml for the equivalent of the annotations\
     \ in\ngRPC API configuration format.\n\nEcho Service API consists of a single\
     \ service which returns\na message."
@@ -16,127 +17,128 @@ info:
     url: "https://github.com/grpc-ecosystem/grpc-gateway/blob/main/LICENSE"
   x-something-something: "yadda"
 tags:
-- name: "Echo"
-  description: "Echo description"
-- name: "Internal"
-  description: "Internal description"
-  x-traitTag: true
-- name: "UnannotatedEchoService"
-  description: "UnannotatedEchoService description -- which should not be used in\
-    \ place of the documentation comment!"
-  externalDocs:
-    description: "Find out more about UnannotatedEchoService"
-    url: "https://github.com/grpc-ecosystem/grpc-gateway"
+  - name: "Echo"
+    description: "Echo description"
+  - name: "Internal"
+    description: "Internal description"
+    x-traitTag: true
+  - name: "UnannotatedEchoService"
+    description:
+      "UnannotatedEchoService description -- which should not be used in\
+      \ place of the documentation comment!"
+    externalDocs:
+      description: "Find out more about UnannotatedEchoService"
+      url: "https://github.com/grpc-ecosystem/grpc-gateway"
 schemes:
-- "http"
-- "https"
-- "wss"
+  - "http"
+  - "https"
+  - "wss"
 consumes:
-- "application/json"
-- "application/x-foo-mime"
+  - "application/json"
+  - "application/x-foo-mime"
 produces:
-- "application/json"
-- "application/x-foo-mime"
+  - "application/json"
+  - "application/x-foo-mime"
 security:
-- ApiKeyAuth: []
-  BasicAuth: []
-- ApiKeyAuth: []
-  OAuth2:
-  - "read"
-  - "write"
+  - ApiKeyAuth: []
+    BasicAuth: []
+  - ApiKeyAuth: []
+    OAuth2:
+      - "read"
+      - "write"
 paths:
   /v1/example/echo/{id}:
     post:
       tags:
-      - "UnannotatedEchoService"
+        - "UnannotatedEchoService"
       summary: "Summary: Echo rpc"
       description: "Description Echo"
       operationId: "UnannotatedEchoService_Echo"
       parameters:
-      - name: "id"
-        in: "path"
-        description: "Id represents the message identifier."
-        required: true
-        type: "string"
-        x-exportParamName: "Id"
-      - name: "num"
-        in: "query"
-        description: "Int value field"
-        required: true
-        type: "string"
-        default: "42"
-        format: "int64"
-        x-exportParamName: "Num"
-      - name: "duration"
-        in: "query"
-        required: false
-        type: "string"
-        x-exportParamName: "Duration"
-        x-optionalDataType: "String"
-      - name: "lineNum"
-        in: "query"
-        required: false
-        type: "string"
-        format: "int64"
-        x-exportParamName: "LineNum"
-        x-optionalDataType: "String"
-      - name: "lang"
-        in: "query"
-        required: false
-        type: "string"
-        x-exportParamName: "Lang"
-        x-optionalDataType: "String"
-      - name: "status.progress"
-        in: "query"
-        required: false
-        type: "string"
-        format: "int64"
-        x-exportParamName: "StatusProgress"
-        x-optionalDataType: "String"
-      - name: "status.note"
-        in: "query"
-        required: false
-        type: "string"
-        x-exportParamName: "StatusNote"
-        x-optionalDataType: "String"
-      - name: "en"
-        in: "query"
-        required: false
-        type: "string"
-        format: "int64"
-        x-exportParamName: "En"
-        x-optionalDataType: "String"
-      - name: "no.progress"
-        in: "query"
-        required: false
-        type: "string"
-        format: "int64"
-        x-exportParamName: "NoProgress"
-        x-optionalDataType: "String"
-      - name: "no.note"
-        in: "query"
-        required: false
-        type: "string"
-        x-exportParamName: "NoNote"
-        x-optionalDataType: "String"
-      - name: "resourceId"
-        in: "query"
-        required: false
-        type: "string"
-        x-exportParamName: "ResourceId"
-        x-optionalDataType: "String"
-      - name: "nId.nId"
-        in: "query"
-        required: false
-        type: "string"
-        x-exportParamName: "NIdNId"
-        x-optionalDataType: "String"
-      - name: "nId.val"
-        in: "query"
-        required: false
-        type: "string"
-        x-exportParamName: "NIdVal"
-        x-optionalDataType: "String"
+        - name: "id"
+          in: "path"
+          description: "Id represents the message identifier."
+          required: true
+          type: "string"
+          x-exportParamName: "Id"
+        - name: "num"
+          in: "query"
+          description: "Int value field"
+          required: true
+          type: "string"
+          default: "42"
+          format: "int64"
+          x-exportParamName: "Num"
+        - name: "duration"
+          in: "query"
+          required: false
+          type: "string"
+          x-exportParamName: "Duration"
+          x-optionalDataType: "String"
+        - name: "lineNum"
+          in: "query"
+          required: false
+          type: "string"
+          format: "int64"
+          x-exportParamName: "LineNum"
+          x-optionalDataType: "String"
+        - name: "lang"
+          in: "query"
+          required: false
+          type: "string"
+          x-exportParamName: "Lang"
+          x-optionalDataType: "String"
+        - name: "status.progress"
+          in: "query"
+          required: false
+          type: "string"
+          format: "int64"
+          x-exportParamName: "StatusProgress"
+          x-optionalDataType: "String"
+        - name: "status.note"
+          in: "query"
+          required: false
+          type: "string"
+          x-exportParamName: "StatusNote"
+          x-optionalDataType: "String"
+        - name: "en"
+          in: "query"
+          required: false
+          type: "string"
+          format: "int64"
+          x-exportParamName: "En"
+          x-optionalDataType: "String"
+        - name: "no.progress"
+          in: "query"
+          required: false
+          type: "string"
+          format: "int64"
+          x-exportParamName: "NoProgress"
+          x-optionalDataType: "String"
+        - name: "no.note"
+          in: "query"
+          required: false
+          type: "string"
+          x-exportParamName: "NoNote"
+          x-optionalDataType: "String"
+        - name: "resourceId"
+          in: "query"
+          required: false
+          type: "string"
+          x-exportParamName: "ResourceId"
+          x-optionalDataType: "String"
+        - name: "nId.nId"
+          in: "query"
+          required: false
+          type: "string"
+          x-exportParamName: "NIdNId"
+          x-optionalDataType: "String"
+        - name: "nId.val"
+          in: "query"
+          required: false
+          type: "string"
+          x-exportParamName: "NIdVal"
+          x-optionalDataType: "String"
       responses:
         200:
           description: "A successful response."
@@ -146,7 +148,8 @@ paths:
           schema:
             $ref: "#/definitions/examplepbUnannotatedSimpleMessage"
         403:
-          description: "Returned when the user does not have permission to access\
+          description:
+            "Returned when the user does not have permission to access\
             \ the resource."
           schema: {}
         404:
@@ -168,95 +171,95 @@ paths:
   /v1/example/echo/{id}/{num}:
     get:
       tags:
-      - "UnannotatedEchoService"
+        - "UnannotatedEchoService"
       summary: "Summary: Echo rpc"
       description: "Description Echo"
       operationId: "UnannotatedEchoService_Echo2"
       parameters:
-      - name: "id"
-        in: "path"
-        description: "Id represents the message identifier."
-        required: true
-        type: "string"
-        x-exportParamName: "Id"
-      - name: "num"
-        in: "path"
-        description: "Int value field"
-        required: true
-        type: "string"
-        default: "42"
-        format: "int64"
-        x-exportParamName: "Num"
-      - name: "duration"
-        in: "query"
-        required: false
-        type: "string"
-        x-exportParamName: "Duration"
-        x-optionalDataType: "String"
-      - name: "lineNum"
-        in: "query"
-        required: false
-        type: "string"
-        format: "int64"
-        x-exportParamName: "LineNum"
-        x-optionalDataType: "String"
-      - name: "lang"
-        in: "query"
-        required: false
-        type: "string"
-        x-exportParamName: "Lang"
-        x-optionalDataType: "String"
-      - name: "status.progress"
-        in: "query"
-        required: false
-        type: "string"
-        format: "int64"
-        x-exportParamName: "StatusProgress"
-        x-optionalDataType: "String"
-      - name: "status.note"
-        in: "query"
-        required: false
-        type: "string"
-        x-exportParamName: "StatusNote"
-        x-optionalDataType: "String"
-      - name: "en"
-        in: "query"
-        required: false
-        type: "string"
-        format: "int64"
-        x-exportParamName: "En"
-        x-optionalDataType: "String"
-      - name: "no.progress"
-        in: "query"
-        required: false
-        type: "string"
-        format: "int64"
-        x-exportParamName: "NoProgress"
-        x-optionalDataType: "String"
-      - name: "no.note"
-        in: "query"
-        required: false
-        type: "string"
-        x-exportParamName: "NoNote"
-        x-optionalDataType: "String"
-      - name: "resourceId"
-        in: "query"
-        required: false
-        type: "string"
-        x-exportParamName: "ResourceId"
-        x-optionalDataType: "String"
-      - name: "nId.nId"
-        in: "query"
-        required: false
-        type: "string"
-        x-exportParamName: "NIdNId"
-        x-optionalDataType: "String"
-      - name: "nId.val"
-        in: "query"
-        required: false
-        type: "string"
-        x-exportParamName: "NIdVal"
-        x-optionalDataType: "String"
+        - name: "id"
+          in: "path"
+          description: "Id represents the message identifier."
+          required: true
+          type: "string"
+          x-exportParamName: "Id"
+        - name: "num"
+          in: "path"
+          description: "Int value field"
+          required: true
+          type: "string"
+          default: "42"
+          format: "int64"
+          x-exportParamName: "Num"
+        - name: "duration"
+          in: "query"
+          required: false
+          type: "string"
+          x-exportParamName: "Duration"
+          x-optionalDataType: "String"
+        - name: "lineNum"
+          in: "query"
+          required: false
+          type: "string"
+          format: "int64"
+          x-exportParamName: "LineNum"
+          x-optionalDataType: "String"
+        - name: "lang"
+          in: "query"
+          required: false
+          type: "string"
+          x-exportParamName: "Lang"
+          x-optionalDataType: "String"
+        - name: "status.progress"
+          in: "query"
+          required: false
+          type: "string"
+          format: "int64"
+          x-exportParamName: "StatusProgress"
+          x-optionalDataType: "String"
+        - name: "status.note"
+          in: "query"
+          required: false
+          type: "string"
+          x-exportParamName: "StatusNote"
+          x-optionalDataType: "String"
+        - name: "en"
+          in: "query"
+          required: false
+          type: "string"
+          format: "int64"
+          x-exportParamName: "En"
+          x-optionalDataType: "String"
+        - name: "no.progress"
+          in: "query"
+          required: false
+          type: "string"
+          format: "int64"
+          x-exportParamName: "NoProgress"
+          x-optionalDataType: "String"
+        - name: "no.note"
+          in: "query"
+          required: false
+          type: "string"
+          x-exportParamName: "NoNote"
+          x-optionalDataType: "String"
+        - name: "resourceId"
+          in: "query"
+          required: false
+          type: "string"
+          x-exportParamName: "ResourceId"
+          x-optionalDataType: "String"
+        - name: "nId.nId"
+          in: "query"
+          required: false
+          type: "string"
+          x-exportParamName: "NIdNId"
+          x-optionalDataType: "String"
+        - name: "nId.val"
+          in: "query"
+          required: false
+          type: "string"
+          x-exportParamName: "NIdVal"
+          x-optionalDataType: "String"
       responses:
         200:
           description: "A successful response."
@@ -266,7 +269,8 @@ paths:
           schema:
             $ref: "#/definitions/examplepbUnannotatedSimpleMessage"
         403:
-          description: "Returned when the user does not have permission to access\
+          description:
+            "Returned when the user does not have permission to access\
             \ the resource."
           schema: {}
         404:
@@ -288,24 +292,25 @@ paths:
   /v1/example/echo_body:
     post:
       tags:
-      - "UnannotatedEchoService"
+        - "UnannotatedEchoService"
       summary: "EchoBody method receives a simple message and returns it."
       operationId: "UnannotatedEchoService_EchoBody"
       parameters:
-      - in: "body"
-        name: "body"
-        description: "A simple message with many types"
-        required: true
-        schema:
-          $ref: "#/definitions/examplepbUnannotatedSimpleMessage"
-        x-exportParamName: "Body"
+        - in: "body"
+          name: "body"
+          description: "A simple message with many types"
+          required: true
+          schema:
+            $ref: "#/definitions/examplepbUnannotatedSimpleMessage"
+          x-exportParamName: "Body"
       responses:
         200:
           description: "A successful response."
           schema:
             $ref: "#/definitions/examplepbUnannotatedSimpleMessage"
         403:
-          description: "Returned when the user does not have permission to access\
+          description:
+            "Returned when the user does not have permission to access\
             \ the resource."
           schema: {}
         404:
@@ -320,102 +325,103 @@ paths:
   /v1/example/echo_delete:
     delete:
       tags:
-      - "UnannotatedEchoService"
+        - "UnannotatedEchoService"
       summary: "EchoDelete method receives a simple message and returns it."
       operationId: "UnannotatedEchoService_EchoDelete"
       parameters:
-      - name: "id"
-        in: "query"
-        description: "Id represents the message identifier."
-        required: false
-        type: "string"
-        x-exportParamName: "Id"
-        x-optionalDataType: "String"
-      - name: "num"
-        in: "query"
-        description: "Int value field"
-        required: true
-        type: "string"
-        default: "42"
-        format: "int64"
-        x-exportParamName: "Num"
-      - name: "duration"
-        in: "query"
-        required: false
-        type: "string"
-        x-exportParamName: "Duration"
-        x-optionalDataType: "String"
-      - name: "lineNum"
-        in: "query"
-        required: false
-        type: "string"
-        format: "int64"
-        x-exportParamName: "LineNum"
-        x-optionalDataType: "String"
-      - name: "lang"
-        in: "query"
-        required: false
-        type: "string"
-        x-exportParamName: "Lang"
-        x-optionalDataType: "String"
-      - name: "status.progress"
-        in: "query"
-        required: false
-        type: "string"
-        format: "int64"
-        x-exportParamName: "StatusProgress"
-        x-optionalDataType: "String"
-      - name: "status.note"
-        in: "query"
-        required: false
-        type: "string"
-        x-exportParamName: "StatusNote"
-        x-optionalDataType: "String"
-      - name: "en"
-        in: "query"
-        required: false
-        type: "string"
-        format: "int64"
-        x-exportParamName: "En"
-        x-optionalDataType: "String"
-      - name: "no.progress"
-        in: "query"
-        required: false
-        type: "string"
-        format: "int64"
-        x-exportParamName: "NoProgress"
-        x-optionalDataType: "String"
-      - name: "no.note"
-        in: "query"
-        required: false
-        type: "string"
-        x-exportParamName: "NoNote"
-        x-optionalDataType: "String"
-      - name: "resourceId"
-        in: "query"
-        required: false
-        type: "string"
-        x-exportParamName: "ResourceId"
-        x-optionalDataType: "String"
-      - name: "nId.nId"
-        in: "query"
-        required: false
-        type: "string"
-        x-exportParamName: "NIdNId"
-        x-optionalDataType: "String"
-      - name: "nId.val"
-        in: "query"
-        required: false
-        type: "string"
-        x-exportParamName: "NIdVal"
-        x-optionalDataType: "String"
+        - name: "id"
+          in: "query"
+          description: "Id represents the message identifier."
+          required: false
+          type: "string"
+          x-exportParamName: "Id"
+          x-optionalDataType: "String"
+        - name: "num"
+          in: "query"
+          description: "Int value field"
+          required: true
+          type: "string"
+          default: "42"
+          format: "int64"
+          x-exportParamName: "Num"
+        - name: "duration"
+          in: "query"
+          required: false
+          type: "string"
+          x-exportParamName: "Duration"
+          x-optionalDataType: "String"
+        - name: "lineNum"
+          in: "query"
+          required: false
+          type: "string"
+          format: "int64"
+          x-exportParamName: "LineNum"
+          x-optionalDataType: "String"
+        - name: "lang"
+          in: "query"
+          required: false
+          type: "string"
+          x-exportParamName: "Lang"
+          x-optionalDataType: "String"
+        - name: "status.progress"
+          in: "query"
+          required: false
+          type: "string"
+          format: "int64"
+          x-exportParamName: "StatusProgress"
+          x-optionalDataType: "String"
+        - name: "status.note"
+          in: "query"
+          required: false
+          type: "string"
+          x-exportParamName: "StatusNote"
+          x-optionalDataType: "String"
+        - name: "en"
+          in: "query"
+          required: false
+          type: "string"
+          format: "int64"
+          x-exportParamName: "En"
+          x-optionalDataType: "String"
+        - name: "no.progress"
+          in: "query"
+          required: false
+          type: "string"
+          format: "int64"
+          x-exportParamName: "NoProgress"
+          x-optionalDataType: "String"
+        - name: "no.note"
+          in: "query"
+          required: false
+          type: "string"
+          x-exportParamName: "NoNote"
+          x-optionalDataType: "String"
+        - name: "resourceId"
+          in: "query"
+          required: false
+          type: "string"
+          x-exportParamName: "ResourceId"
+          x-optionalDataType: "String"
+        - name: "nId.nId"
+          in: "query"
+          required: false
+          type: "string"
+          x-exportParamName: "NIdNId"
+          x-optionalDataType: "String"
+        - name: "nId.val"
+          in: "query"
+          required: false
+          type: "string"
+          x-exportParamName: "NIdVal"
+          x-optionalDataType: "String"
       responses:
         200:
           description: "A successful response."
           schema:
             $ref: "#/definitions/examplepbUnannotatedSimpleMessage"
         403:
-          description: "Returned when the user does not have permission to access\
+          description:
+            "Returned when the user does not have permission to access\
             \ the resource."
           schema: {}
         404:
@@ -450,7 +456,7 @@ definitions:
     description: "Embedded represents a message embedded in SimpleMessage."
     x-go-type:
       import:
-        package: "github.com/grpc-ecosystem/grpc-gateway/v2/examples/internal/proto/examplepb"
+        package: "github.com/kralicky/grpc-gateway/v2/examples/internal/proto/examplepb"
       type: "UnannotatedEmbedded"
   examplepbUnannotatedNestedMessage:
     type: "object"
@@ -461,13 +467,13 @@ definitions:
         type: "string"
     x-go-type:
       import:
-        package: "github.com/grpc-ecosystem/grpc-gateway/v2/examples/internal/proto/examplepb"
+        package: "github.com/kralicky/grpc-gateway/v2/examples/internal/proto/examplepb"
       type: "UnannotatedNestedMessage"
   examplepbUnannotatedSimpleMessage:
     type: "object"
     required:
-    - "id"
-    - "num"
+      - "id"
+      - "num"
     properties:
       id:
         type: "string"
@@ -505,7 +511,7 @@ definitions:
   protobufAny:
     type: "object"
     properties:
-      '@type':
+      "@type":
         type: "string"
     additionalProperties: {}
     x-go-type:
@@ -532,6 +538,6 @@ externalDocs:
   description: "More about gRPC-Gateway"
   url: "https://github.com/grpc-ecosystem/grpc-gateway"
 x-grpc-gateway-baz-list:
-- "one"
-- true
+  - "one"
+  - true
 x-grpc-gateway-foo: "bar"

@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/grpc-ecosystem/grpc-gateway/v2/pkg/descriptor/apiconfig"
+	"github.com/kralicky/grpc-gateway/v2/pkg/descriptor/apiconfig"
 	"google.golang.org/protobuf/encoding/protojson"
 	"gopkg.in/yaml.v3"
 )
