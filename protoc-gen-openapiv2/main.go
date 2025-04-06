@@ -7,9 +7,9 @@ import (
 	"runtime/debug"
 	"strings"
 
-	"github.com/grpc-ecosystem/grpc-gateway/v2/internal/codegenerator"
-	"github.com/grpc-ecosystem/grpc-gateway/v2/internal/descriptor"
-	"github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/internal/genopenapi"
+	"github.com/grpc-ecosystem/grpc-gateway/v2/pkg/codegenerator"
+	"github.com/grpc-ecosystem/grpc-gateway/v2/pkg/descriptor"
+	"github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/pkg/genopenapi"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/utilities"
 	"google.golang.org/grpc/grpclog"
 	"google.golang.org/protobuf/proto"

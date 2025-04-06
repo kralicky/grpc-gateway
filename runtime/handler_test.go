@@ -10,7 +10,7 @@ import (
 	"testing"
 
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
-	pb "github.com/grpc-ecosystem/grpc-gateway/v2/runtime/internal/examplepb"
+	pb "github.com/grpc-ecosystem/grpc-gateway/v2/runtime/pkg/examplepb"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/status"
